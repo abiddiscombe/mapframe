@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MapFrame</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mapframe.css">
+        <script src='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
+        <link href='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
+    </head>
+    <body class="mapframe-grid">
+        <header class="mapframe-styled-header">
+            <h1>A Sample Map</h1>
+        </header>
+        <main>
+            <div class="--sidebar-l mapframe-styled-sidebar">
+                <h2>Welcome to this demo of MapFrame!</h2>
+                <p>MapFrame is a lightweight CSS stylesheet designed to help you quickly create a web map.</p>
+                <p>It's designed to be used as a wireframe, and then forked to create custom versions, or replaced entirely beyond the Proof-of-Concept stage.</p>
+                <h3>Attribution</h3>
+                <p>There's no need to credit MapFrame in your map creations.</p>
+                <small>I'd be greatful if you could drop a reference back to the repository, if you found it useful.</small>
+            </div>
+            <div class="--main">
+                <div id="map" style="height: 100%">
+
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        var map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
+            center: [-1.9626, 52.1121],
+            zoom: 6,
+        });
+    </script>
+</html>
